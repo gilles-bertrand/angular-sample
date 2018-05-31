@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-content>
+    <section>
+        <h2>User edit form</h2>
+    </section>
+    <section>
+      <form [formGroup]="form" (submit)="submitForm()">
+        <section>
+            <mat-form-field>
+                <input matInput placeholder="id" formControlName="id">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="email" formControlName="email">
+                <mat-error *ngIf="form.controls['email'].invalid">{{_validationMessageService.getErrorMessage('email',form)}}</mat-error>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field>
+                <input matInput placeholder="street" formControlName="street">
+                <mat-error *ngIf="form.controls['street'].invalid">{{_validationMessageService.getErrorMessage('street',form)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="number" formControlName="number">
+                <mat-error *ngIf="form.controls['number'].invalid">{{_validationMessageService.getErrorMessage('number',form)}}</mat-error>
+            </mat-form-field>
+        </section>
+          <section>
+              <mat-form-field>
+                  <input matInput placeholder="zip" formControlName="zip">
+                  <mat-error *ngIf="form.controls['zip'].invalid">{{_validationMessageService.getErrorMessage('zip',form)}}</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="town" formControlName="town">
+                  <mat-error *ngIf="form.controls['town'].invalid">{{_validationMessageService.getErrorMessage('town',form)}}</mat-error>
+              </mat-form-field>
+          </section>
+         <section>
+            <mat-form-field>
+                <mat-select placeholder="Country" formControlName="country">
+                    <mat-option *ngFor="let country of _countriesService.countries" value="{{country}}" >
+                      {{country}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.controls['country'].invalid">{{_validationMessageService.getErrorMessage('country',form)}}</mat-error>
+            </mat-form-field>
+         </section>
+         <section>
+            <button mat-raised-button color="primary">Submit</button>
+         </section>
+        </form>
+  </section>
+
+  </mat-card-content>
+</mat-card>
+
+
+

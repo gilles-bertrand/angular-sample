@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "joelle@triptyk.eu",
+      "street": "avenue du tir",
+      "number": 80,
+      "zip": 7000,
+      "town": "mons",
+      "country": "United States"
+    },
+    {
+      "id": 3,
+      "email": "aramis@triptyk.eu",
+      "street": "route d'ath",
+      "number": 180,
+      "zip": 7011,
+      "town": "hyon",
+      "country": "Belgium"
+    },
+    {
+      "email": "gilles@triptyk.eu",
+      "street": "Boulevard Initialis 7bt4, TRIPTYK OFFICE",
+      "number": "234",
+      "zip": "7000",
+      "town": "MONS",
+      "country": "Andorra",
+      "id": 4
+    },
+    {
+      "email": "qsdsq@sqdsq.com",
+      "street": "fsdf",
+      "number": "sdfds",
+      "zip": "dsfsdf",
+      "town": "sdfsdf",
+      "country": "Ecuador",
+      "id": 5
+    }
+  ]
+}
