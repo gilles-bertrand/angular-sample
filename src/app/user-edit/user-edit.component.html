@@ -1,47 +1,47 @@
 <mat-card>
-  <mat-card-content>
-    <section>
-        <h2>User Create form</h2>
-    </section>
-    <section>
+    <mat-card-content>
+      <section>
+          <h2>User edit form</h2>
+      </section>
+      <section>
         <form [formGroup]="form" (submit)="submitForm()">
           <section>
-              <!-- <mat-form-field>
+              <mat-form-field>
                   <input matInput placeholder="id" formControlName="id">
-              </mat-form-field> -->
+              </mat-form-field>
               <mat-form-field>
                   <input matInput placeholder="email" formControlName="email">
-                  <mat-error *ngIf="form.controls['email'].invalid">{{getErrorMessage('email')}}</mat-error>
+                  <mat-error *ngIf="form.controls['email'].invalid">{{validationMessageService.getErrorMessage('email',form)}}</mat-error>
               </mat-form-field>
           </section>
           <section>
               <mat-form-field>
                   <input matInput placeholder="street" formControlName="street">
-                  <mat-error *ngIf="form.controls['street'].invalid">{{getErrorMessage('street')}}</mat-error>
+                  <mat-error *ngIf="form.controls['street'].invalid">{{validationMessageService.getErrorMessage('street',form)}}</mat-error>
               </mat-form-field>
               <mat-form-field>
                   <input matInput placeholder="number" formControlName="number">
-                  <mat-error *ngIf="form.controls['number'].invalid">{{getErrorMessage('number')}}</mat-error>
+                  <mat-error *ngIf="form.controls['number'].invalid">{{validationMessageService.getErrorMessage('number',form)}}</mat-error>
               </mat-form-field>
           </section>
             <section>
                 <mat-form-field>
                     <input matInput placeholder="zip" formControlName="zip">
-                    <mat-error *ngIf="form.controls['zip'].invalid">{{getErrorMessage('zip')}}</mat-error>
+                    <mat-error *ngIf="form.controls['zip'].invalid">{{validationMessageService.getErrorMessage('zip',form)}}</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <input matInput placeholder="town" formControlName="town">
-                    <mat-error *ngIf="form.controls['town'].invalid">{{getErrorMessage('town')}}</mat-error>
+                    <mat-error *ngIf="form.controls['town'].invalid">{{validationMessageService.getErrorMessage('town',form)}}</mat-error>
                 </mat-form-field>
             </section>
            <section>
               <mat-form-field>
-                  <mat-select placeholder="Country" [(value)]="user.country" formControlName="country">
-                      <mat-option *ngFor="let country of countries" value="{{country}}" >
+                  <mat-select placeholder="Country" formControlName="country">
+                      <mat-option *ngFor="let country of countriesService.countries" value="{{country}}" >
                         {{country}}
                       </mat-option>
                   </mat-select>
-                  <mat-error *ngIf="form.controls['country'].invalid">{{getErrorMessage('country')}}</mat-error>
+                  <mat-error *ngIf="form.controls['country'].invalid">{{validationMessageService.getErrorMessage('country',form)}}</mat-error>
               </mat-form-field>
            </section>
            <section>
@@ -49,9 +49,10 @@
            </section>
           </form>
     </section>
-
-  </mat-card-content>
-</mat-card>
-
-
-
+  
+    </mat-card-content>
+  </mat-card>
+  
+  
+  
+  

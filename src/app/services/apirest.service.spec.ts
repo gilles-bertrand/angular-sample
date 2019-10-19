@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CountriesService } from './countries.service';
+import { ApirestService } from './apirest.service';
 
-describe('CountriesService', () => {
+describe('ApirestService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: CountriesService = TestBed.get(CountriesService);
+    const service: ApirestService = TestBed.get(ApirestService);
     expect(service).toBeTruthy();
   });
 });
